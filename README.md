@@ -76,6 +76,9 @@ NumPy
 ## 👤 Author
 
 AI/ML Engineering Learning Project
-Alvaro Vega
-Aspiring AI Engineer | Machine Learning Engineer | NLP & LLM Systems
+
+# Alvaro Vega
+
+### Aspiring AI Engineer | Machine Learning Engineer | NLP & LLM Systems
+
 GitHub: https://github.com/Javier-DataScience
