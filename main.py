@@ -1,6 +1,6 @@
 # ---------------------------------------------------
 # MAIN ENTRY POINT
-# Text Generation Lab
+# Text Generation Lab (Upgraded)
 # ---------------------------------------------------
 
 from src.text_generator import TextGenerator
@@ -10,16 +10,25 @@ if __name__ == "__main__":
 
     engine = TextGenerator()
 
-    prompt = "Artificial intelligence will change the world because"
+    prompt = "Artificial intelligence will transform the world because"
 
-    print("\n=== TEXT GENERATION LAB ===\n")
-    print("PROMPT:", prompt)
+    print("\n==============================")
+    print("LLM TEXT GENERATION EXPERIMENT")
+    print("==============================\n")
 
-    print("\n--- LOW CREATIVITY ---")
-    print(engine.generate(prompt, temperature=0.2))
+    print("PROMPT:")
+    print(prompt)
 
-    print("\n--- BALANCED ---")
-    print(engine.generate(prompt, temperature=0.7))
+    print("\nRunning experiment...\n")
 
-    print("\n--- HIGH CREATIVITY ---")
-    print(engine.generate(prompt, temperature=1.2))
+    experiment = engine.run_experiment(prompt)
+
+    print("MODEL:", experiment["model"])
+
+    for i, result in enumerate(experiment["results"]):
+
+        print("\n------------------------------")
+        print(f"EXPERIMENT {i+1}")
+        print("Temperature:", result["temperature"])
+        print("\nOutput:")
+        print(result["output"])
